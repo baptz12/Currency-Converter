@@ -11,6 +11,9 @@ public class AddServlet extends HttpServlet
 {
   public void service(HttpServletRequest req, HttpServletResponse res) throws IOException 
   {
+    String cssTag = "<link rel='stylesheet' type='text/css' href='style.css'>";
+    String errorTag = "error";
+    String successTag = "success";
     String amount = req.getParameter("num1");
     String curr1 = req.getParameter("curr1");
     String curr2 = req.getParameter("curr2");
@@ -26,9 +29,20 @@ public class AddServlet extends HttpServlet
     }
     PrintWriter out = res.getWriter();
     if (result == 0) {
-      out.println("Error, please retry");
+      out.println("<html>");
+      out.println("<head><title>Title Name</title>"+cssTag+"</head>");
+      out.println("<body>");
+      out.println("<div class="+errorTag+">Error with request, please retry.</div>");
+      out.println("</body></html>");
       return;
     }
-    out.println(result);
+    out.println("<html>");
+    out.println("<head><title>Title Name</title>"+cssTag+"</head>");
+    out.println("<body>");
+    out.println("<div class="+successTag+">");
+    out.println(result + " ");
+    out.println(curr2);
+    out.println("</div>");
+    out.println("</body></html>");
   }
 }

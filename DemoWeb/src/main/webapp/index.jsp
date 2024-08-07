@@ -2,16 +2,17 @@
     pageEncoding="ISO-8859-1"%>
 <!DOCTYPE html>
 <html>
+<link href="style.css" type="text/css" rel="stylesheet">
 <head>
 <meta charset="ISO-8859-1">
 <title>Insert title here</title>
 </head>
 <body>
 	<form action = "add">
-		Enter your amount : <input type="text" name="num1"><br>
-		Enter the currency of the amount : <input type="text" name="curr1"><br>
-		Enter the currency of the result : <input type="text" name="curr2"><br>
-		<input type = "submit">
+		<input type="text" placeholder="Enter your amount" name="num1"><br>
+		<input type="text" placeholder="Enter the currency of the amount" name="curr1"><br>
+		<input type="text" placeholder="Enter the currency of the result" name="curr2"><br>
+		<input class="button" type = "submit">
 	</form>
 </body>
 </html>
