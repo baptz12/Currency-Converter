@@ -8,6 +8,7 @@
 <title>Insert title here</title>
 </head>
 <body>
+	<h1 class= "title">Currency Converter</h1>
 	<form action = "add">
 		<input type="text" placeholder="Enter your amount" name="num1"><br>
 		<input type="text" placeholder="Enter the currency of the amount" name="curr1"><br>
