@@ -22,7 +22,6 @@ public class MoneyApi
       String count2 = args[1];
       String currency3 = args[2];
       String API_KEY = "YOUR API KEY";
-      System.out.println(API_KEY);
       double amount = Double.parseDouble(count1);
 
       URL url = new URL(
